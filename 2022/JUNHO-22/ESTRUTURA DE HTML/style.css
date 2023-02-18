@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+ul li:first-child {
+  color: red;
+}
+
+article p:nth-of-type(3) {
+  color: blue;
+}
+
+article p:nth-child(2) {
+  color: red;
+  }
+
+  
+article p:nth-child(odd) {
+  background-color: gray;
+  }
+    

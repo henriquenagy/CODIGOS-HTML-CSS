@@ -1,0 +1,441 @@
+/*font-family: 'Montserrat', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap');
+
+/*====  RESET ============================ */
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/*====  VARIABLES ============================ */
+:root {
+  --primary:#B0884E;
+  --secondary: #ededed;
+  --tertiary: white;
+  --text-color: black;
+  --text-secondary: white;
+  --border-line: #0000005b;
+  --escuro: #1B1B1B;
+}
+
+/*====  PONTOS DA LISTA   ============================ */
+.grid {
+  list-style: none;
+}
+
+/*====  LINHA ABAIXO MENU ============================ */
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a {
+  transition: color 0.2s;
+  position: relative;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--primary);
+}
+
+nav ul li a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: var(--primary);
+
+  position: absolute;
+  left: 0;
+  bottom: -0.6rem;
+
+  transition: width 0.2s;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+@media (max-width: 2100px) {
+/*===  BASE ============================ */
+body {
+  font-size: 100%;
+  }
+
+/* GLOBAL FONTS*/ 
+h1 { 
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+h2, h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+button {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background-color: var(--primary);
+  border:none;
+  width: 16rem;
+  height: 3.1875rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+button:hover {
+  font-size: 1rem;
+  font-weight: 600;  
+  color: var(--primary);
+  background-color: var(--tertiary);
+  border: 0.07rem solid var(--primary);  
+  height: 3.1875rem;
+  border-radius: 0.4rem;
+}
+
+/*====  LOGO ============================ */
+.logo {
+  color: var(--primary);
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.logo span {
+  color: var(--escuro);
+  font-weight: 400;
+}
+/*====  HEADER ============================ */
+header {
+border-bottom: 0.02rem solid var(--border-line);
+width: 100%;
+}
+
+.toggle {
+  display: none;
+}
+
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.logoheader {
+  width: 5%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+.menu-options {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu-childrens {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+#header {
+  border-bottom: 1px solid #e4e4e4;
+  margin-bottom: 2rem;
+  display: flex;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--body-color);
+  width: 100%;
+}
+
+
+
+
+/* Main */
+main {
+  margin: 4rem 1.2rem 4rem 1.2rem;
+}
+
+/*Main - Section 1*/
+.first-section {
+ display: flex;
+ flex-direction: row; 
+ align-items: center;
+ justify-content: space-around;
+ margin: 0rem 0rem 4rem 0rem;
+}
+
+.div-first-section {
+ display: flex;
+ flex-direction: column;
+ gap: 1rem;
+}
+
+.imagem-agencia {
+  width: 30%;
+  height: 30%;
+  border-radius: 1rem;
+}
+
+
+/* Main - Section 3*/
+.second-section {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 1rem;
+}
+
+.borda-h3 {
+ border-top: 0.02rem solid var(--border-line);
+ padding-top: 4rem;
+}
+
+/*Footer*/
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-top: 0.02rem solid var(--border-line);
+  background: var(--secondary);
+}
+
+.logo-footer {
+  width: 10%;
+  height: 10%;
+  display: block; 
+  margin: 0 auto;
+}
+}
+
+
+/* MOBILE */  
+@media (max-width: 767px) {
+  /* GLOBAL FONTS*/ 
+  h1 { 
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-color);
+  }
+  
+  h2, h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+  }
+  
+  p {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--text-color);
+  }
+  
+    button {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background-color: var(--primary);
+    border:none;
+    width: 13rem;
+    height: 2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    font-size: 0.8rem;
+    font-weight: 600;  
+    color: var(--primary);
+    background-color: var(--tertiary);
+    border: 0.07rem solid var(--primary);  
+    height: 2rem;
+    border-radius: 0.4rem;
+  }
+
+/*HEADER - MOBILE*/
+  .logo {
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+  
+  .logo span {
+    font-size: 1rem;
+    color: var(--escuro);
+    font-weight: 400;
+  }
+
+
+  /*HEADER - MOBILE*/
+header {
+  border-bottom: 0.01rem solid var(--border-line);
+  width: 100%;
+  }
+
+  .container {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .logoheader {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    padding: 0rem 0rem 0rem 2rem;
+    object-fit: contain;
+    object-position: left;
+  }
+
+  .menu-childrens {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.3rem;
+  }
+
+  .menu-options {
+    flex: 4;
+  }
+
+  nav .menu-options a {
+    display: none;
+  }
+
+
+  /* Mostrar menu */
+nav.show .menu-options {
+  opacity: 1;
+  visibility: visible;
+
+  background: var(--tertiary);
+
+  height: 100vh;
+  width: 100vw;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: grid;
+  place-content: center;
+}
+
+nav.show .menu-options {
+  display: grid;
+}
+
+nav.show div.menu-options {
+  gap: 4rem;
+}
+
+/* toggle menu */
+.toggle {
+  color: var(--primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+nav .icon-close {
+  visibility: hidden;
+  opacity: 0;
+
+  position: absolute;
+  top: -1.5rem;
+  right: 1.5rem;
+
+  transition: 0.2s;
+}
+
+nav.show div.icon-close {
+  visibility: visible;
+  opacity: 1;
+  top: 1.5rem;
+}
+
+/* Main */
+  main {
+    margin: 2rem;
+  }
+  
+  /*Main - Section 1*/
+  .first-section {
+   display: flex;
+   flex-direction: column; 
+   align-items: center;
+   justify-content: space-around;
+   margin: 0rem 0rem 4rem 0rem;
+  }
+  
+  .div-first-section {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   align-items: center;
+   text-align: center;
+   padding-bottom: 2rem;
+  }
+  
+  .imagem-agencia {
+    width: 50%;
+    height: 50%;
+    border-radius: 1rem;
+  }
+  
+  
+  /* Main - Section 3*/
+  .second-section {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   gap: 1rem;
+  }
+  
+  .borda-h3 {
+   border-top: 0.02rem solid var(--border-line);
+   padding-top: 4rem;
+  }
+  
+  /*Footer*/
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: 0.02rem solid var(--border-line);
+    background: var(--secondary);
+  }
+  
+  .logo-footer {
+    width: 10%;
+    height: 10%;
+    display: block;
+    margin: 0 auto;
+  }
+}

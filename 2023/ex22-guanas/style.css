@@ -97,3 +97,27 @@ section#fundo-central h1 {
   flex-basis: 100%
 }
 
+/* Capítulo 19 Aula 06 */
+#teste-fundo {
+ padding: 1em;
+ background-size: cover;
+
+ /* SHORTHAND 
+ background-color: black;
+ background-image: url('imagens/wallpaper002.jpg');
+ background-position: center center;
+ background-repeat: repeat-y;
+ background-attachment: fixed;
+ color = image - position - repeat - attachment */
+ background: black url('imagens/wallpaper002.jpg') center center repeat-y fixed; 
+ }
+
+#teste-fundo-div {
+margin: auto;
+background-color: white;
+padding: 0.8em;
+border: 1px solid lightgreen;
+border-radius: 15px;
+max-width: 400px;
+}
+
